@@ -6,7 +6,9 @@
          <div v-else class="list">
                 <ul>
                      <li v-for="(item, index) in list" :key="index">
-                          <router-link to="#" :title="item.author_id"><img :src="item.author.avatar_url" :title="item.author.loginname"></router-link>
+                          <router-link :to="{name: 'user_info', params: {name: item.author.loginname}}" :title="item.author_id">
+                            <img :src="item.author.avatar_url" :title="item.author.loginname">
+                          </router-link>
                           <span class="count">{{item.reply_count}}/{{item.visit_count}}</span>
                           <router-link to="#" :title="item.title">{{item.title}}</router-link>
                           <span class="time">{{item.last_reply_at | formateDate}}</span>
