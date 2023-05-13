@@ -1,9 +1,19 @@
 <template>
   <div id="app">
-     app
+      <!-- 头部 -->
+       <Header></Header>
+       <!-- 主页面 -->
+       <router-view name="main"></router-view>
   </div>
 </template>
-
+<script>
+import Header from '@/components/Header.vue'
+export default {
+  components: {
+    Header
+  }
+}
+</script>
 <style>
 html {
    font-size: 20px;
