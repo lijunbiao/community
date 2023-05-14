@@ -16,11 +16,13 @@ export default {
 </script>
 <style>
 html {
-   font-size: 20px;
    background-color: #DDDDDD
 }
 * {
    margin: 0;
    padding: 0;
+}
+#app {
+     font-size: 20px;
 }
 </style>

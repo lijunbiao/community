@@ -13,7 +13,7 @@
                     <p>回复的主题</p>
                     <ul>
                         <li v-for="(item, index) in userinfo.recent_replies" :key="index">
-                            <router-link to="/">
+                            <router-link :to="{name: 'post_content', params: {id: item.id, name: item.author.loginname}}">
                               {{item.title}}
                             </router-link>
                         </li>
@@ -24,7 +24,7 @@
                 <p>创建的主题</p>
                     <ul>
                    <li v-for="(item, index) in userinfo.recent_topics" :key="index">
-                            <router-link to="/">
+                            <router-link :to="{name: 'post_content', params: {id: item.id, name: item.author.loginname}}">
                               {{item.title}}
                             </router-link>
                         </li>
@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .info {
     background: white;
-    width: 70%;
+    width: 75%;
     margin: 10px auto;
 }
 .user {
