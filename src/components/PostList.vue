@@ -10,7 +10,7 @@
                             <img :src="item.author.avatar_url" :title="item.author.loginname">
                           </router-link>
                           <span class="count">{{item.reply_count}}/{{item.visit_count}}</span>
-                          <router-link to="#" :title="item.title">{{item.title}}</router-link>
+                          <router-link :to="{name: 'post_content', params: {id: item.id, name: item.author.loginname}}" :title="item.title">{{item.title}}</router-link>
                           <span class="time">{{item.last_reply_at | formateDate}}</span>
                      </li>
                 </ul>

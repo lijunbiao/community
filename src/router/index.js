@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import PostList from '@/components/PostList.vue'
 import UserInfo from '@/components/UserInfo.vue'
 import Article from '@/components/Article.vue'
+import SideBar from '@/components/SideBar.vue'
 
 Vue.use(VueRouter)
 
@@ -24,7 +25,8 @@ const routes = [
     path: '/topic/:id&author=:name',
     name: 'post_content',
     components: {
-      main: Article
+      main: Article,
+      sidebar: SideBar
     }
 
   }

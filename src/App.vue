@@ -4,6 +4,7 @@
        <Header></Header>
        <!-- 主页面 -->
        <router-view name="main"></router-view>
+       <router-view name="sidebar"></router-view>
   </div>
 </template>
 <script>

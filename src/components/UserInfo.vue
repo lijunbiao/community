@@ -1,6 +1,9 @@
 <template>
   <div class="UserInfo">
-        <div class="info">
+        <div v-if="loading">
+           Loading...
+        </div>
+        <div v-else class="info">
               <!-- 上部分 -->
               <div class="user">
                  <img :src="userinfo.avatar_url" :title="userinfo.loginname">
@@ -38,10 +41,12 @@ export default {
   name: 'c-userinfo',
   data () {
     return {
-      userinfo: {} // 用户信息
+      userinfo: {}, // 用户信息
+      loading: false
     }
   },
   beforeMount () {
+    this.loading = true
     this.getData()
   },
   methods: {
@@ -54,6 +59,7 @@ export default {
         .then((res) => {
           if (res.data.success === true) { // 获取信息成功
             this.userinfo = res.data.data
+            this.loading = false
           }
         })
         .catch((error) => {
