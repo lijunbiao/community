@@ -1,5 +1,7 @@
-# 该网站为it技术交流社区，采用Vue + VueRouter + axios + webpack进行实现
-
+# 该网站为it技术交流社区
+```
+技术选型：Vue + VueRouter + axios + webpack
+```
 ## Project setup
 ```
 npm install
